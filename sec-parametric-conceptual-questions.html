@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Conceptual Questions: Parametric Equations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Proteus Questions">
+<meta property="book:author" content="Daniel Birmajer">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.12.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.d2d4c56cb9826035.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.a4a209ed3a55c515.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Proteus Questions</span> <span class="subtitle">An example to get you started</span></a></h1>
+<p class="byline">Daniel Birmajer</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="backmatter-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter Title</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-name.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Section Title</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-parametric-conceptual-questions.html" class="internal"><span class="codenumber">1</span> <span class="title">Conceptual Questions: Parametric Equations</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-parametric-conceptual-questions"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Conceptual Questions: Parametric Equations</span>
+</h2>
+<section class="introduction" id="sec-parametric-conceptual-questions-2"><div class="para" id="sec-parametric-conceptual-questions-2-1">The following exercises review key conceptual ideas from Section 10.2 on parametric equations, including identifying the curve, determining direction of motion, recognizing repeated tracing, and comparing different parametrizations of the same geometric object.<div class="autopermalink" data-description="Paragraph"><a href="#sec-parametric-conceptual-questions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><details id="ex-parametric-conceptual-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="ex-parametric-conceptual-2-1-1">Which parametric equations trace the line segment from <span class="process-math">\((0,1)\)</span> to <span class="process-math">\((2,5)\)</span> along the line <span class="process-math">\(y=2x+1\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-ex-parametric-conceptual-2" data-multipleanswers="false">
+<li data-component="answer" id="rs-ex-parametric-conceptual-2_opt_a" data-correct=""><div class="para" id="ex-parametric-conceptual-2-2-1-1-1"><span class="process-math">\(x=t,\ y=2t+1,\ 0\le t\le 2\)</span></div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-2_opt_a">
+<li data-component="answer" id="rs-ex-parametric-conceptual-2_opt_b"><div class="para" id="ex-parametric-conceptual-2-2-2-1-1"><span class="process-math">\(x=2t,\ y=4t+1,\ 0\le t\le 2\)</span></div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-2_opt_b">
+<li data-component="answer" id="rs-ex-parametric-conceptual-2_opt_c"><div class="para" id="ex-parametric-conceptual-2-2-3-1-1"><span class="process-math">\(x=t,\ y=2t+1,\ -1\le t\le 1\)</span></div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-2_opt_c">
+<li data-component="answer" id="rs-ex-parametric-conceptual-2_opt_d"><div class="para" id="ex-parametric-conceptual-2-2-4-1-1"><span class="process-math">\(x=t^2,\ y=2t^2+1,\ 0\le t\le 2\)</span></div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-2_opt_d">
+</ul>
+</div></div>
+<div class="solutions"><details id="ex-parametric-conceptual-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-parametric-conceptual-2-3-1">The equations <span class="process-math">\(x=t\)</span> and <span class="process-math">\(y=2t+1\)</span> produce <span class="process-math">\(y=2x+1\text{.}\)</span> When <span class="process-math">\(t=0\text{,}\)</span> the point is <span class="process-math">\((0,1)\text{,}\)</span> and when <span class="process-math">\(t=2\text{,}\)</span> the point is <span class="process-math">\((2,5)\text{.}\)</span> The other options either trace a larger portion, the wrong segment, or not the full segment in the intended way.<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.0.1.1"><a href="#ex-parametric-conceptual-2-3" title="Copy heading and permalink for Solution 1.0.1.1" aria-label="Copy heading and permalink for Solution 1.0.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.0.1"><a href="#ex-parametric-conceptual-2" title="Copy heading and permalink for Checkpoint 1.0.1" aria-label="Copy heading and permalink for Checkpoint 1.0.1">🔗</a></div></article></details><details id="ex-parametric-conceptual-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="ex-parametric-conceptual-3-1-1">A particle moves according to <span class="process-math">\(x=\cos t\text{,}\)</span> <span class="process-math">\(y=\sin t\text{,}\)</span> for <span class="process-math">\(0\le t\le 4\pi\text{.}\)</span> How many times is the unit circle traced?<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-ex-parametric-conceptual-3" data-multipleanswers="false">
+<li data-component="answer" id="rs-ex-parametric-conceptual-3_opt_a"><div class="para" id="ex-parametric-conceptual-3-2-1-1-1">One-half time</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-3_opt_a">
+<li data-component="answer" id="rs-ex-parametric-conceptual-3_opt_b"><div class="para" id="ex-parametric-conceptual-3-2-2-1-1">One time</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-3_opt_b">
+<li data-component="answer" id="rs-ex-parametric-conceptual-3_opt_c" data-correct=""><div class="para" id="ex-parametric-conceptual-3-2-3-1-1">Two times</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-3_opt_c">
+<li data-component="answer" id="rs-ex-parametric-conceptual-3_opt_d"><div class="para" id="ex-parametric-conceptual-3-2-4-1-1">Four times</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-3_opt_d">
+</ul>
+</div></div>
+<div class="solutions"><details id="ex-parametric-conceptual-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-parametric-conceptual-3-3-1">The parametrization <span class="process-math">\(x=\cos t,\ y=\sin t\)</span> completes one full revolution when <span class="process-math">\(t\)</span> runs from <span class="process-math">\(0\)</span> to <span class="process-math">\(2\pi\text{.}\)</span> Since the interval is <span class="process-math">\(0\le t\le 4\pi\text{,}\)</span> the circle is traced twice.<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.0.2.1"><a href="#ex-parametric-conceptual-3-3" title="Copy heading and permalink for Solution 1.0.2.1" aria-label="Copy heading and permalink for Solution 1.0.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.0.2"><a href="#ex-parametric-conceptual-3" title="Copy heading and permalink for Checkpoint 1.0.2" aria-label="Copy heading and permalink for Checkpoint 1.0.2">🔗</a></div></article></details><details id="ex-parametric-conceptual-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="ex-parametric-conceptual-4-1-1">Consider the parametric equations <span class="process-math">\(x=t^2\text{,}\)</span> <span class="process-math">\(y=t+1\text{,}\)</span> for <span class="process-math">\(-2\le t\le 2\text{.}\)</span> Which statement is true?<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-ex-parametric-conceptual-4" data-multipleanswers="false">
+<li data-component="answer" id="rs-ex-parametric-conceptual-4_opt_a"><div class="para" id="ex-parametric-conceptual-4-2-1-1-1">The curve is a parabola traced exactly once from left to right.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-4_opt_a">
+<li data-component="answer" id="rs-ex-parametric-conceptual-4_opt_b" data-correct=""><div class="para" id="ex-parametric-conceptual-4-2-2-1-1">The curve is part of a sideways parabola, and some <span class="process-math">\(x\)</span>-values occur more than once.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-4_opt_b">
+<li data-component="answer" id="rs-ex-parametric-conceptual-4_opt_c"><div class="para" id="ex-parametric-conceptual-4-2-3-1-1">The curve is a line segment traced from bottom to top.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-4_opt_c">
+<li data-component="answer" id="rs-ex-parametric-conceptual-4_opt_d"><div class="para" id="ex-parametric-conceptual-4-2-4-1-1">The curve is the entire parabola <span class="process-math">\(y=x^2\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-4_opt_d">
+</ul>
+</div></div>
+<div class="solutions"><details id="ex-parametric-conceptual-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-parametric-conceptual-4-3-1">Since <span class="process-math">\(t=y-1\text{,}\)</span> substituting into <span class="process-math">\(x=t^2\)</span> gives <span class="process-math">\(x=(y-1)^2\text{,}\)</span> a sideways parabola. Because <span class="process-math">\(x=t^2\text{,}\)</span> the same <span class="process-math">\(x\)</span>-value occurs for both positive and negative values of <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.0.3.1"><a href="#ex-parametric-conceptual-4-3" title="Copy heading and permalink for Solution 1.0.3.1" aria-label="Copy heading and permalink for Solution 1.0.3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.0.3"><a href="#ex-parametric-conceptual-4" title="Copy heading and permalink for Checkpoint 1.0.3" aria-label="Copy heading and permalink for Checkpoint 1.0.3">🔗</a></div></article></details><details id="ex-parametric-conceptual-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="ex-parametric-conceptual-5-1-1">Suppose <span class="process-math">\(x(t)\)</span> is increasing and <span class="process-math">\(y(t)\)</span> is decreasing on an interval. What can be concluded about the motion of the particle on that interval?<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-ex-parametric-conceptual-5" data-multipleanswers="false">
+<li data-component="answer" id="rs-ex-parametric-conceptual-5_opt_a"><div class="para" id="ex-parametric-conceptual-5-2-1-1-1">The particle moves left and up.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-5_opt_a">
+<li data-component="answer" id="rs-ex-parametric-conceptual-5_opt_b" data-correct=""><div class="para" id="ex-parametric-conceptual-5-2-2-1-1">The particle moves right and down.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-5_opt_b">
+<li data-component="answer" id="rs-ex-parametric-conceptual-5_opt_c"><div class="para" id="ex-parametric-conceptual-5-2-3-1-1">The particle moves left and down.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-5_opt_c">
+<li data-component="answer" id="rs-ex-parametric-conceptual-5_opt_d"><div class="para" id="ex-parametric-conceptual-5-2-4-1-1">The particle must move along a straight line.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-5_opt_d">
+</ul>
+</div></div>
+<div class="solutions"><details id="ex-parametric-conceptual-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-parametric-conceptual-5-3-1">If <span class="process-math">\(x(t)\)</span> is increasing, then the particle moves to the right. If <span class="process-math">\(y(t)\)</span> is decreasing, then the particle moves downward. This does not imply the path is a straight line.<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.0.4.1"><a href="#ex-parametric-conceptual-5-3" title="Copy heading and permalink for Solution 1.0.4.1" aria-label="Copy heading and permalink for Solution 1.0.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.0.4"><a href="#ex-parametric-conceptual-5" title="Copy heading and permalink for Checkpoint 1.0.4" aria-label="Copy heading and permalink for Checkpoint 1.0.4">🔗</a></div></article></details><details id="ex-parametric-conceptual-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="ex-parametric-conceptual-6-1-1">Which of the following parametrizations traces the line <span class="process-math">\(y=3x-2\)</span> in the direction from left to right?<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-ex-parametric-conceptual-6" data-multipleanswers="false">
+<li data-component="answer" id="rs-ex-parametric-conceptual-6_opt_a" data-correct=""><div class="para" id="ex-parametric-conceptual-6-2-1-1-1">
+<span class="process-math">\(x=t,\ y=3t-2\text{,}\)</span> where <span class="process-math">\(t\)</span> increases</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-6_opt_a">
+<li data-component="answer" id="rs-ex-parametric-conceptual-6_opt_b"><div class="para" id="ex-parametric-conceptual-6-2-2-1-1">
+<span class="process-math">\(x=-t,\ y=-3t-2\text{,}\)</span> where <span class="process-math">\(t\)</span> increases</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-6_opt_b">
+<li data-component="answer" id="rs-ex-parametric-conceptual-6_opt_c"><div class="para" id="ex-parametric-conceptual-6-2-3-1-1">
+<span class="process-math">\(x=t^2,\ y=3t^2-2\text{,}\)</span> where <span class="process-math">\(t\)</span> increases</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-6_opt_c">
+<li data-component="answer" id="rs-ex-parametric-conceptual-6_opt_d"><div class="para" id="ex-parametric-conceptual-6-2-4-1-1">
+<span class="process-math">\(x=\sin t,\ y=3\sin t-2\text{,}\)</span> for all real <span class="process-math">\(t\)</span>
+</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-6_opt_d">
+</ul>
+</div></div>
+<div class="solutions"><details id="ex-parametric-conceptual-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-parametric-conceptual-6-3-1">The first option gives <span class="process-math">\(y=3x-2\)</span> and as <span class="process-math">\(t\)</span> increases, <span class="process-math">\(x=t\)</span> increases, so the motion is left to right. The second option traces the same line but with reversed direction. The other options do not trace the entire line in a simple one-pass left-to-right way.<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.0.5.1"><a href="#ex-parametric-conceptual-6-3" title="Copy heading and permalink for Solution 1.0.5.1" aria-label="Copy heading and permalink for Solution 1.0.5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.0.5"><a href="#ex-parametric-conceptual-6" title="Copy heading and permalink for Checkpoint 1.0.5" aria-label="Copy heading and permalink for Checkpoint 1.0.5">🔗</a></div></article></details><details id="ex-parametric-conceptual-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement">
+<div class="para" id="ex-parametric-conceptual-7-1-1">Two parametrizations are given:<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-parametric-conceptual-7-1-2">
+<span class="process-math">\(x=\cos t,\ y=\sin t,\ 0\le t\le 2\pi\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-parametric-conceptual-7-1-3">and<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-7-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-parametric-conceptual-7-1-4">
+<span class="process-math">\(x=\cos(2t),\ y=\sin(2t),\ 0\le t\le \pi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-7-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-parametric-conceptual-7-1-5">Which statement is true?<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-7-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-ex-parametric-conceptual-7" data-multipleanswers="false">
+<li data-component="answer" id="rs-ex-parametric-conceptual-7_opt_a"><div class="para" id="ex-parametric-conceptual-7-2-1-1-1">The second traces a larger circle.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-7_opt_a">
+<li data-component="answer" id="rs-ex-parametric-conceptual-7_opt_b"><div class="para" id="ex-parametric-conceptual-7-2-2-1-1">The second traces the same circle twice.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-7_opt_b">
+<li data-component="answer" id="rs-ex-parametric-conceptual-7_opt_c" data-correct=""><div class="para" id="ex-parametric-conceptual-7-2-3-1-1">The second traces the same circle once, but at a different speed.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-7_opt_c">
+<li data-component="answer" id="rs-ex-parametric-conceptual-7_opt_d"><div class="para" id="ex-parametric-conceptual-7-2-4-1-1">The two curves are different because the parameter intervals are different.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-7_opt_d">
+</ul>
+</div></div>
+<div class="solutions"><details id="ex-parametric-conceptual-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-parametric-conceptual-7-3-1">As <span class="process-math">\(t\)</span> goes from <span class="process-math">\(0\)</span> to <span class="process-math">\(\pi\text{,}\)</span> the angle <span class="process-math">\(2t\)</span> goes from <span class="process-math">\(0\)</span> to <span class="process-math">\(2\pi\text{.}\)</span> So the second parametrization traces the unit circle exactly once, but the parameter changes at a different rate.<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.0.6.1"><a href="#ex-parametric-conceptual-7-3" title="Copy heading and permalink for Solution 1.0.6.1" aria-label="Copy heading and permalink for Solution 1.0.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.0.6"><a href="#ex-parametric-conceptual-7" title="Copy heading and permalink for Checkpoint 1.0.6" aria-label="Copy heading and permalink for Checkpoint 1.0.6">🔗</a></div></article></details><details id="ex-parametric-conceptual-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="ex-parametric-conceptual-8-1-1">A parametric curve is given by <span class="process-math">\(x=t^3\text{,}\)</span> <span class="process-math">\(y=t^6\text{.}\)</span> Which Cartesian equation describes the curve?<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-ex-parametric-conceptual-8" data-multipleanswers="false">
+<li data-component="answer" id="rs-ex-parametric-conceptual-8_opt_a"><div class="para" id="ex-parametric-conceptual-8-2-1-1-1">
+<span class="process-math">\(y=x^2\text{,}\)</span> for all real <span class="process-math">\(x\)</span>
+</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-8_opt_a">
+<li data-component="answer" id="rs-ex-parametric-conceptual-8_opt_b" data-correct=""><div class="para" id="ex-parametric-conceptual-8-2-2-1-1">
+<span class="process-math">\(y=x^2\text{,}\)</span> with <span class="process-math">\(y\ge 0\)</span>
+</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-8_opt_b">
+<li data-component="answer" id="rs-ex-parametric-conceptual-8_opt_c"><div class="para" id="ex-parametric-conceptual-8-2-3-1-1">
+<span class="process-math">\(x=y^2\text{,}\)</span> with <span class="process-math">\(x\ge 0\)</span>
+</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-8_opt_c">
+<li data-component="answer" id="rs-ex-parametric-conceptual-8_opt_d"><div class="para" id="ex-parametric-conceptual-8-2-4-1-1"><span class="process-math">\(y=x^3\)</span></div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-8_opt_d">
+</ul>
+</div></div>
+<div class="solutions"><details id="ex-parametric-conceptual-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-parametric-conceptual-8-3-1-1">Since <span class="process-math">\(x=t^3\text{,}\)</span> we have <span class="process-math">\(x^2=t^6=y\text{.}\)</span> Thus the curve satisfies <span class="process-math">\(y=x^2\text{.}\)</span> Because squares are nonnegative, <span class="process-math">\(y\ge 0\text{,}\)</span> which is consistent with the parabola.<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-8-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.0.7.1"><a href="#ex-parametric-conceptual-8-3" title="Copy heading and permalink for Solution 1.0.7.1" aria-label="Copy heading and permalink for Solution 1.0.7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.0.7"><a href="#ex-parametric-conceptual-8" title="Copy heading and permalink for Checkpoint 1.0.7" aria-label="Copy heading and permalink for Checkpoint 1.0.7">🔗</a></div></article></details><details id="ex-parametric-conceptual-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="ex-parametric-conceptual-9-1-1">Which statement best explains why two different parametric equations can describe the same geometric curve?<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-ex-parametric-conceptual-9" data-multipleanswers="false">
+<li data-component="answer" id="rs-ex-parametric-conceptual-9_opt_a"><div class="para" id="ex-parametric-conceptual-9-2-1-1-1">Because parametric equations always produce infinitely many different curves.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-9_opt_a">
+<li data-component="answer" id="rs-ex-parametric-conceptual-9_opt_b" data-correct=""><div class="para" id="ex-parametric-conceptual-9-2-2-1-1">Different functions of the parameter can produce the same set of points, possibly with different speeds or directions.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-9_opt_b">
+<li data-component="answer" id="rs-ex-parametric-conceptual-9_opt_c"><div class="para" id="ex-parametric-conceptual-9-2-3-1-1">Because every Cartesian equation has only one possible parametrization.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-9_opt_c">
+<li data-component="answer" id="rs-ex-parametric-conceptual-9_opt_d"><div class="para" id="ex-parametric-conceptual-9-2-4-1-1">Because changing the parameter always changes the geometric shape of the curve.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-9_opt_d">
+</ul>
+</div></div>
+<div class="solutions"><details id="ex-parametric-conceptual-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-parametric-conceptual-9-3-1-1">A parametric curve is determined by the set of points traced and how they are traced. Different choices of parameter can produce the same set of points while changing orientation, speed, or how often the curve is retraced.<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-9-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.0.8.1"><a href="#ex-parametric-conceptual-9-3" title="Copy heading and permalink for Solution 1.0.8.1" aria-label="Copy heading and permalink for Solution 1.0.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.0.8"><a href="#ex-parametric-conceptual-9" title="Copy heading and permalink for Checkpoint 1.0.8" aria-label="Copy heading and permalink for Checkpoint 1.0.8">🔗</a></div></article></details><details id="ex-parametric-conceptual-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="ex-parametric-conceptual-10-1-1">A particle moves according to <span class="process-math">\(x=\cos t\text{,}\)</span> <span class="process-math">\(y=\sin t\text{,}\)</span> for <span class="process-math">\(0\le t\le \pi\text{.}\)</span> Which description is correct?<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-ex-parametric-conceptual-10" data-multipleanswers="false">
+<li data-component="answer" id="rs-ex-parametric-conceptual-10_opt_a"><div class="para" id="ex-parametric-conceptual-10-2-1-1-1">The particle traces the entire unit circle clockwise.</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-10_opt_a">
+<li data-component="answer" id="rs-ex-parametric-conceptual-10_opt_b" data-correct=""><div class="para" id="ex-parametric-conceptual-10-2-2-1-1">The particle traces the upper semicircle counterclockwise from <span class="process-math">\((1,0)\)</span> to <span class="process-math">\((-1,0)\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-10_opt_b">
+<li data-component="answer" id="rs-ex-parametric-conceptual-10_opt_c"><div class="para" id="ex-parametric-conceptual-10-2-3-1-1">The particle traces the lower semicircle clockwise from <span class="process-math">\((1,0)\)</span> to <span class="process-math">\((-1,0)\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-10_opt_c">
+<li data-component="answer" id="rs-ex-parametric-conceptual-10_opt_d"><div class="para" id="ex-parametric-conceptual-10-2-4-1-1">The particle traces a line segment from <span class="process-math">\((1,0)\)</span> to <span class="process-math">\((-1,0)\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-ex-parametric-conceptual-10_opt_d">
+</ul>
+</div></div>
+<div class="solutions"><details id="ex-parametric-conceptual-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-parametric-conceptual-10-3-1-1">At <span class="process-math">\(t=0\text{,}\)</span> the point is <span class="process-math">\((1,0)\text{.}\)</span> At <span class="process-math">\(t=\pi/2\text{,}\)</span> the point is <span class="process-math">\((0,1)\text{.}\)</span> At <span class="process-math">\(t=\pi\text{,}\)</span> the point is <span class="process-math">\((-1,0)\text{.}\)</span> Thus the motion follows the upper semicircle counterclockwise.<div class="autopermalink" data-description="Paragraph"><a href="#ex-parametric-conceptual-10-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.0.9.1"><a href="#ex-parametric-conceptual-10-3" title="Copy heading and permalink for Solution 1.0.9.1" aria-label="Copy heading and permalink for Solution 1.0.9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 1.0.9"><a href="#ex-parametric-conceptual-10" title="Copy heading and permalink for Checkpoint 1.0.9" aria-label="Copy heading and permalink for Checkpoint 1.0.9">🔗</a></div></article></details><details id="parametric-multiple-choice-multiple-answers" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parametric Curve, Select all that apply.</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="parametric-multiple-choice-multiple-answers-2-1">A particle moves according to <span class="process-math">\(x=t^2\)</span> and <span class="process-math">\(y=t^2\)</span> for <span class="process-math">\(-2\le t&lt;2\text{.}\)</span> Select all true statements about the curve and the motion of the particle.<div class="autopermalink" data-description="Paragraph"><a href="#parametric-multiple-choice-multiple-answers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-parametric-multiple-choice-multiple-answers" data-multipleanswers="true">
+<li data-component="answer" id="rs-parametric-multiple-choice-multiple-answers_opt_a" data-correct=""><div class="para" id="parametric-multiple-choice-multiple-answers-3-1-1-1">Every point traced by the particle lies on the line <span class="process-math">\(y=x\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-parametric-multiple-choice-multiple-answers_opt_a"><div class="para" id="parametric-multiple-choice-multiple-answers-3-1-2-1">Correct. Since <span class="process-math">\(x=t^2\)</span> and <span class="process-math">\(y=t^2\text{,}\)</span> we always have <span class="process-math">\(y=x\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-parametric-multiple-choice-multiple-answers_opt_b" data-correct=""><div class="para" id="parametric-multiple-choice-multiple-answers-3-2-1-1">The particle traces a line segment from <span class="process-math">\((0,0)\)</span> to <span class="process-math">\((4,4)\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-parametric-multiple-choice-multiple-answers_opt_b"><div class="para" id="parametric-multiple-choice-multiple-answers-3-2-2-1">Correct. Because <span class="process-math">\(t^2\)</span> ranges through all values from <span class="process-math">\(0\)</span> to <span class="process-math">\(4\text{,}\)</span> both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> take the same values in that interval, so the traced set is exactly the line segment on <span class="process-math">\(y=x\)</span> from <span class="process-math">\((0,0)\)</span> to <span class="process-math">\((4,4)\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-parametric-multiple-choice-multiple-answers_opt_c"><div class="para" id="parametric-multiple-choice-multiple-answers-3-3-1-1">The parametric equations trace an arc of the parabola <span class="process-math">\(y=x^2\)</span> from <span class="process-math">\((0,0)\)</span> to <span class="process-math">\((4,4)\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-parametric-multiple-choice-multiple-answers_opt_c"><div class="para" id="parametric-multiple-choice-multiple-answers-3-3-2-1">This is false. Since <span class="process-math">\(x=t^2\)</span> and <span class="process-math">\(y=t^2\text{,}\)</span> eliminating the parameter gives <span class="process-math">\(y=x\text{,}\)</span> not <span class="process-math">\(y=x^2\text{.}\)</span> The curve is a line segment, not a parabolic arc.</div></li>
+<li data-component="answer" id="rs-parametric-multiple-choice-multiple-answers_opt_d" data-correct=""><div class="para" id="parametric-multiple-choice-multiple-answers-3-4-1-1">The particle starts at <span class="process-math">\((4,4)\text{,}\)</span> moves to <span class="process-math">\((0,0)\text{,}\)</span> and then retraces the same segment back toward <span class="process-math">\((4,4)\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-parametric-multiple-choice-multiple-answers_opt_d"><div class="para" id="parametric-multiple-choice-multiple-answers-3-4-2-1">Correct. At <span class="process-math">\(t=-2\text{,}\)</span> the particle is at <span class="process-math">\((4,4)\text{.}\)</span> As <span class="process-math">\(t\)</span> increases to <span class="process-math">\(0\text{,}\)</span> <span class="process-math">\(t^2\)</span> decreases to <span class="process-math">\(0\text{,}\)</span> so the particle moves to <span class="process-math">\((0,0)\text{.}\)</span> Then as <span class="process-math">\(t\)</span> increases from <span class="process-math">\(0\)</span> toward <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(t^2\)</span> increases again, so the particle retraces the same path.</div></li>
+<li data-component="answer" id="rs-parametric-multiple-choice-multiple-answers_opt_e"><div class="para" id="parametric-multiple-choice-multiple-answers-3-5-1-1">All points on the curve are traced twice.</div></li>
+<li data-component="feedback" id="rs-parametric-multiple-choice-multiple-answers_opt_e"><div class="para" id="parametric-multiple-choice-multiple-answers-3-5-2-1">False. If <span class="process-math">\(0&lt;a&lt;4\text{,}\)</span> then the point <span class="process-math">\((a,a)\)</span> occurs for both <span class="process-math">\(t=\sqrt{a}\)</span> and <span class="process-math">\(t=-\sqrt{a}\text{.}\)</span> The origin is traced only once, at <span class="process-math">\(t=0\text{.}\)</span> The point <span class="process-math">\((4,4)\)</span> is approached again as <span class="process-math">\(t\to 2^-\text{,}\)</span> but <span class="process-math">\(t=2\)</span> is not included.</div></li>
+<li data-component="answer" id="rs-parametric-multiple-choice-multiple-answers_opt_f" data-correct=""><div class="para" id="parametric-multiple-choice-multiple-answers-3-6-1-1">The particle is at the point <span class="process-math">\((4, 4)\)</span> at some moment <span class="process-math">\(t\)</span> .</div></li>
+<li data-component="feedback" id="rs-parametric-multiple-choice-multiple-answers_opt_f"><div class="para" id="parametric-multiple-choice-multiple-answers-3-6-2-1">This is true. The particle is at the point <span class="process-math">\((4,4)\)</span> at time <span class="process-math">\(t=-2\text{.}\)</span>
+</div></li>
+</ul>
+</div></div>
+<div class="solutions">
+<details id="parametric-multiple-choice-multiple-answers-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="parametric-multiple-choice-multiple-answers-4-1">Try eliminating the parameter first. Then think separately about the <em class="emphasis">geometric curve</em> and the <em class="emphasis">direction of motion</em> as <span class="process-math">\(t\)</span> increases.<div class="autopermalink" data-description="Paragraph"><a href="#parametric-multiple-choice-multiple-answers-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.0.10.1"><a href="#parametric-multiple-choice-multiple-answers-4" title="Copy heading and permalink for Hint 1.0.10.1" aria-label="Copy heading and permalink for Hint 1.0.10.1">🔗</a></div>
+</div></details><details id="parametric-multiple-choice-multiple-answers-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="parametric-multiple-choice-multiple-answers-5-1">Since <span class="process-math">\(x=t^2\)</span> and <span class="process-math">\(y=t^2\text{,}\)</span> we have <span class="process-math">\(y=x\text{.}\)</span> Because <span class="process-math">\(-2\le t&lt;2\text{,}\)</span> the quantity <span class="process-math">\(t^2\)</span> takes every value in the interval <span class="process-math">\([0,4]\text{.}\)</span> Therefore, the geometric curve is the line segment from <span class="process-math">\((0,0)\)</span> to <span class="process-math">\((4,4)\text{.}\)</span> At <span class="process-math">\(t=-2\text{,}\)</span> the particle starts at <span class="process-math">\((4,4)\text{,}\)</span> moves toward <span class="process-math">\((0,0)\)</span> as <span class="process-math">\(t\)</span> increases to <span class="process-math">\(0\text{,}\)</span> and then retraces the segment back toward <span class="process-math">\((4,4)\)</span> as <span class="process-math">\(t\)</span> increases from <span class="process-math">\(0\)</span> toward <span class="process-math">\(2\text{.}\)</span> Thus the true statements are that the curve lies on <span class="process-math">\(y=x\text{,}\)</span> that it is the segment from <span class="process-math">\((0,0)\)</span> to <span class="process-math">\((4,4)\text{,}\)</span> that the particle retraces the segment, and that most points are traced twice.<div class="autopermalink" data-description="Paragraph"><a href="#parametric-multiple-choice-multiple-answers-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.0.10.1"><a href="#parametric-multiple-choice-multiple-answers-5" title="Copy heading and permalink for Solution 1.0.10.1" aria-label="Copy heading and permalink for Solution 1.0.10.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Checkpoint 1.0.10: Parametric Curve, Select all that apply"><a href="#parametric-multiple-choice-multiple-answers" title="Copy heading and permalink for Checkpoint 1.0.10: Parametric Curve, Select all that apply" aria-label="Copy heading and permalink for Checkpoint 1.0.10: Parametric Curve, Select all that apply">🔗</a></div></article></details><details id="matching-parametric-concepts-with-distractors" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h2 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.0.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Match Parametric Equations to Graph Descriptions (with Distractors).</span>
+</h2></summary><article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-matching-parametric-concepts-with-distractors">
+<span data-subcomponent="question"><div class="para" id="matching-parametric-concepts-with-distractors-3-1">Match each parametric curve with the description of its graph or motion. Some responses may not match any curve.<div class="autopermalink" data-description="Paragraph"><a href="#matching-parametric-concepts-with-distractors-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></span><span data-subcomponent="feedback"><div class="para" id="matching-parametric-concepts-with-distractors-4-1">Eliminate the parameter to see the geometric curve, consider the range of t, and pay attention to motion direction.</div></span><li data-subcomponent="draggable" id="rs-matching-parametric-concepts-with-distractors_drag1" data-category="1">
+<span class="process-math">\(x=t^2, y=t^2\text{,}\)</span> <span class="process-math">\(-2 ≤ t &lt; 2\)</span>
+</li>
+<li data-subcomponent="dropzone" for="rs-matching-parametric-concepts-with-distractors_drag1" data-category="1">Line segment from (0,0) to (4,4), points mostly traced twice, retraces motion</li>
+<li data-subcomponent="draggable" id="rs-matching-parametric-concepts-with-distractors_drag2" data-category="2">
+<span class="process-math">\(x=cos(t), y=sin(t)\text{,}\)</span> <span class="process-math">\(0 ≤ t ≤ 2π\)</span>
+</li>
+<li data-subcomponent="dropzone" for="rs-matching-parametric-concepts-with-distractors_drag2" data-category="2">Circle of radius 1 centered at the origin, traced once counterclockwise</li>
+<li data-subcomponent="draggable" id="rs-matching-parametric-concepts-with-distractors_drag3" data-category="3"><span class="process-math">\(x=t, y=t^2-2 ≤ t ≤ 2\)</span></li>
+<li data-subcomponent="dropzone" for="rs-matching-parametric-concepts-with-distractors_drag3" data-category="3">Parabola opening upward from (-2,4) to (2,4)</li>
+<li data-subcomponent="draggable" id="rs-matching-parametric-concepts-with-distractors_drag4" data-category="4">
+<span class="process-math">\(x=2cos(t), y=3sin(t)\text{,}\)</span> <span class="process-math">\(0 ≤ t ≤ 2π\)</span>
+</li>
+<li data-subcomponent="dropzone" for="rs-matching-parametric-concepts-with-distractors_drag4" data-category="4">Ellipse centered at the origin, semi-major axis 3 along y, semi-minor axis 2 along x</li>
+<li data-subcomponent="draggable" id="rs-matching-parametric-concepts-with-distractors_drag5" data-category="5">
+<span class="process-math">\(x=sin(2t), y=cos(2t)\text{,}\)</span> <span class="process-math">\(0 ≤ t ≤ 2π\)</span>
+</li>
+<li data-subcomponent="dropzone" for="rs-matching-parametric-concepts-with-distractors_drag5" data-category="5">Circle of radius 1 centered at the origin, traced twice counterclockwise</li>
+<li data-subcomponent="draggable" id="rs-matching-parametric-concepts-with-distractors_drag6" data-category="6">
+<span class="process-math">\(x=3, y=t^2\text{,}\)</span> <span class="process-math">\(0 ≤ t ≤ 3\)</span>
+</li>
+<li data-subcomponent="dropzone" for="rs-matching-parametric-concepts-with-distractors_drag6" data-category="6">A vertical line segment</li>
+<li data-subcomponent="dropzone" for="rs-matching-parametric-concepts-with-distractors_drag7" data-category="7">Line segment along <span class="process-math">\(y=2x\)</span> from <span class="process-math">\((0,0)\)</span> to <span class="process-math">\((2,4)\)</span>
+</li>
+<li data-subcomponent="dropzone" for="rs-matching-parametric-concepts-with-distractors_drag8" data-category="8">Circle of radius 2 centered at the origin</li>
+<li data-subcomponent="dropzone" for="rs-matching-parametric-concepts-with-distractors_drag9" data-category="9">An horizontal line segment</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Checkpoint 1.0.11: Match Parametric Equations to Graph Descriptions (with Distractors)"><a href="#matching-parametric-concepts-with-distractors" title="Copy heading and permalink for Checkpoint 1.0.11: Match Parametric Equations to Graph Descriptions (with Distractors)" aria-label="Copy heading and permalink for Checkpoint 1.0.11: Match Parametric Equations to Graph Descriptions (with Distractors)">🔗</a></div></article></details><div class="autopermalink" data-description="Section 1: Conceptual Questions: Parametric Equations"><a href="#sec-parametric-conceptual-questions" title="Copy heading and permalink for Section 1: Conceptual Questions: Parametric Equations" aria-label="Copy heading and permalink for Section 1: Conceptual Questions: Parametric Equations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="backmatter-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
