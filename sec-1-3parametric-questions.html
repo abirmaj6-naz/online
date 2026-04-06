@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>10.3 Calculus and Parametric Equations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Proteus Questions">
+<meta property="book:author" content="Daniel Birmajer">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.f6b4a33441cf25ab.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.720279673ae692d7.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Proteus Questions</span> <span class="subtitle">Test Environment</span></a></h1>
+<p class="byline">Daniel Birmajer</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-10-2parametric-questions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-10.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-chapter-10.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter 10 Curves in the Plane</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-10-2parametric-questions.html" class="internal"><span class="codenumber">1.1</span> <span class="title">10.2 Parametric Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-10-2parametric-questions.html#parametric-curves" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-1-3parametric-questions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">10.3 Calculus and Parametric Equations</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-1-3parametric-questions.html#calculus_parametric" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-1-3parametric-questions"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">10.3 Calculus and Parametric Equations</span>
+</h2>
+<section class="exercises" id="calculus_parametric"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<section class="introduction" id="calculus_parametric-1"><div class="para" id="calculus_parametric-1-1">We are still interested in lines tangent to points on a curve. They describe how the <span class="process-math">\(y\)</span>-values are changing with respect to the <span class="process-math">\(x\)</span>-values, they are useful in making approximations, and they indicate instantaneous direction of travel.<div class="autopermalink" data-description="Paragraph"><a href="#calculus_parametric-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="exercise exercise-like" id="sec10-3-concept-mc-02"><h4 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercise: Interpreting a horizontal tangent..</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="sec10-3-concept-mc-02-2-1">Suppose a particle moves along a parametric curve and at <span class="process-math">\(t=t_0\)</span> we have <span class="process-math">\(\dfrac{dy}{dt}=0\)</span> and <span class="process-math">\(\dfrac{dx}{dt}\neq 0\text{.}\)</span> What does this tell us?<div class="autopermalink" data-description="Paragraph"><a href="#sec10-3-concept-mc-02-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-sec10-3-concept-mc-02" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-sec10-3-concept-mc-02_opt_a" data-correct=""><div class="para" id="sec10-3-concept-mc-02-3-1-1-1">The tangent line to the curve is horizontal at the corresponding point.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-mc-02_opt_a"><div class="para" id="sec10-3-concept-mc-02-3-1-2-1">Correct. When <span class="process-math">\(\dfrac{dy}{dt}=0\)</span> and <span class="process-math">\(\dfrac{dx}{dt}\neq 0\text{,}\)</span> the slope of the tangent line to the curve <span class="process-math">\(y(x)\)</span> is <span class="process-math">\(\dfrac{dy}{dx}=0\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-mc-02_opt_b"><div class="para" id="sec10-3-concept-mc-02-3-2-1-1">The particle has stopped moving completely.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-mc-02_opt_b"><div class="para" id="sec10-3-concept-mc-02-3-2-2-1">
+<span class="process-math">\(\dfrac{dy}{dt}=0\)</span> only means the vertical component of motion is zero at that instant.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-mc-02_opt_c"><div class="para" id="sec10-3-concept-mc-02-3-3-1-1">The tangent line is vertical at the corresponding point.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-mc-02_opt_c"><div class="para" id="sec10-3-concept-mc-02-3-3-2-1">A vertical tangent is associated with <span class="process-math">\(\dfrac{dx}{dt}=0\)</span> and <span class="process-math">\(\dfrac{dy}{dt}\neq 0\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-mc-02_opt_d"><div class="para" id="sec10-3-concept-mc-02-3-4-1-1">The curve must have a local maximum in <span class="process-math">\(y\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-mc-02_opt_d"><div class="para" id="sec10-3-concept-mc-02-3-4-2-1">A horizontal tangent does not automatically imply a local maximum.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 1.2.1: Exercise: Interpreting a horizontal tangent."><a href="#sec10-3-concept-mc-02" title="Copy heading and permalink for Exercise 1.2.1: Exercise: Interpreting a horizontal tangent." aria-label="Copy heading and permalink for Exercise 1.2.1: Exercise: Interpreting a horizontal tangent.">🔗</a></div></article><article class="exercise exercise-like" id="sec10-3-concept-mc-03"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercise: Interpreting concavity for a parametric curve..</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="sec10-3-concept-mc-03-2-1">At a point on a parametric curve, suppose <span class="process-math">\(\dfrac{d^2y}{dx^2}&gt;0\text{.}\)</span> Which statement best describes the graph near that point?<div class="autopermalink" data-description="Paragraph"><a href="#sec10-3-concept-mc-03-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-sec10-3-concept-mc-03" data-multipleanswers="false" data-random="">
+<li data-component="answer" id="rs-sec10-3-concept-mc-03_opt_a" data-correct=""><div class="para" id="sec10-3-concept-mc-03-3-1-1-1">The curve is concave up near that point (where the derivative is defined).</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-mc-03_opt_a"><div class="para" id="sec10-3-concept-mc-03-3-1-2-1">Correct. A positive second derivative indicates concave up behavior.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-mc-03_opt_b"><div class="para" id="sec10-3-concept-mc-03-3-2-1-1">The curve must cross the <span class="process-math">\(x\)</span>-axis at that point.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-mc-03_opt_b"><div class="para" id="sec10-3-concept-mc-03-3-2-2-1">Concavity does not determine whether the curve crosses an axis.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-mc-03_opt_c"><div class="para" id="sec10-3-concept-mc-03-3-3-1-1">The tangent line must be horizontal at that point.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-mc-03_opt_c"><div class="para" id="sec10-3-concept-mc-03-3-3-2-1">Concavity and slope are different ideas.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-mc-03_opt_d"><div class="para" id="sec10-3-concept-mc-03-3-4-1-1">The particle must be speeding up at that point.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-mc-03_opt_d"><div class="para" id="sec10-3-concept-mc-03-3-4-2-1">Concavity of the graph is not the same as speed increasing.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 1.2.2: Exercise: Interpreting concavity for a parametric curve."><a href="#sec10-3-concept-mc-03" title="Copy heading and permalink for Exercise 1.2.2: Exercise: Interpreting concavity for a parametric curve." aria-label="Copy heading and permalink for Exercise 1.2.2: Exercise: Interpreting concavity for a parametric curve.">🔗</a></div></article><article class="exercise exercise-like" id="sec10-3-concept-sata-02"><h4 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercise: Horizontal and vertical tangents..</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="sec10-3-concept-sata-02-2-1">Select all true statements about tangent lines to parametric curves.<div class="autopermalink" data-description="Paragraph"><a href="#sec10-3-concept-sata-02-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-sec10-3-concept-sata-02" data-multipleanswers="true" data-random="">
+<li data-component="answer" id="rs-sec10-3-concept-sata-02_opt_a" data-correct=""><div class="para" id="sec10-3-concept-sata-02-3-1-1-1">If <span class="process-math">\(\dfrac{dy}{dt}=0\)</span> and <span class="process-math">\(\dfrac{dx}{dt}\neq 0\text{,}\)</span> then the tangent line is horizontal.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-02_opt_a"><div class="para" id="sec10-3-concept-sata-02-3-1-2-1">Correct.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-sata-02_opt_b" data-correct=""><div class="para" id="sec10-3-concept-sata-02-3-2-1-1">If <span class="process-math">\(\dfrac{dx}{dt}=0\)</span> and <span class="process-math">\(\dfrac{dy}{dt}\neq 0\text{,}\)</span> then the tangent line is vertical.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-02_opt_b"><div class="para" id="sec10-3-concept-sata-02-3-2-2-1">Correct.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-sata-02_opt_c"><div class="para" id="sec10-3-concept-sata-02-3-3-1-1">If <span class="process-math">\(\dfrac{dy}{dt}=0\text{,}\)</span> then the particle is not moving.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-02_opt_c"><div class="para" id="sec10-3-concept-sata-02-3-3-2-1">The particle may still be moving horizontally.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-sata-02_opt_d"><div class="para" id="sec10-3-concept-sata-02-3-4-1-1">If <span class="process-math">\(\dfrac{dx}{dt}=0\text{,}\)</span> then the tangent line must be horizontal.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-02_opt_d"><div class="para" id="sec10-3-concept-sata-02-3-4-2-1">This is the condition associated with a vertical tangent, provided <span class="process-math">\(\dfrac{dy}{dt}\neq 0\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-sata-02_opt_e" data-correct=""><div class="para" id="sec10-3-concept-sata-02-3-5-1-1">A particle can be moving even when the tangent line is horizontal.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-02_opt_e"><div class="para" id="sec10-3-concept-sata-02-3-5-2-1">Correct. The horizontal component of velocity may be nonzero.</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 1.2.3: Exercise: Horizontal and vertical tangents."><a href="#sec10-3-concept-sata-02" title="Copy heading and permalink for Exercise 1.2.3: Exercise: Horizontal and vertical tangents." aria-label="Copy heading and permalink for Exercise 1.2.3: Exercise: Horizontal and vertical tangents.">🔗</a></div></article><article class="exercise exercise-like" id="sec10-3-concept-sata-04"><h4 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercise: Same curve, different parameterizations..</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="sec10-3-concept-sata-04-2-1">Two particles move according to the parametric equations <span class="process-math">\(x=t,\ y=t^2\)</span> and <span class="process-math">\(\overline{x}=2t,\ \overline{y}=4t^2\text{.}\)</span> Select all true statements.<div class="autopermalink" data-description="Paragraph"><a href="#sec10-3-concept-sata-04-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-sec10-3-concept-sata-04" data-multipleanswers="true" data-random="">
+<li data-component="answer" id="rs-sec10-3-concept-sata-04_opt_a" data-correct=""><div class="para" id="sec10-3-concept-sata-04-3-1-1-1">Both particles trace the same parabola, but they may move along it at different rates.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-04_opt_a"><div class="para" id="sec10-3-concept-sata-04-3-1-2-1">Correct. Both parameterizations describe the curve <span class="process-math">\(y=x^2\text{,}\)</span> but the parameter changes how the curve is traced.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-sata-04_opt_b"><div class="para" id="sec10-3-concept-sata-04-3-2-1-1">The particles trace different curves because the equations are not identical.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-04_opt_b"><div class="para" id="sec10-3-concept-sata-04-3-2-2-1">Different parameterizations can describe the same geometric curve.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-sata-04_opt_c"><div class="para" id="sec10-3-concept-sata-04-3-3-1-1">Since both parametrizations describe the same parabola, so <span class="process-math">\(\dfrac{dy}{dx}\)</span> is equal to <span class="process-math">\(\dfrac{d\overline{y}}{d\overline{x}}\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-04_opt_c"><div class="para" id="sec10-3-concept-sata-04-3-3-2-1">Both particles move along the parabola <span class="process-math">\(y=x^2\text{,}\)</span> but at different speed.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-sata-04_opt_d" data-correct=""><div class="para" id="sec10-3-concept-sata-04-3-4-1-1">
+<span class="process-math">\(\dfrac{dy}{dx}\)</span> is half of <span class="process-math">\(\dfrac{d\overline{y}}{d\overline{x}}\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-04_opt_d"><div class="para" id="sec10-3-concept-sata-04-3-4-2-1">Correct. The second particle moves at twice the speed of the first particle.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-sata-04_opt_e" data-correct=""><div class="para" id="sec10-3-concept-sata-04-3-5-1-1">The second particle is faster than the first, so <span class="process-math">\(\dfrac{dy}{dx} \lt \dfrac{d\overline{y}}{d\overline{x}}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-04_opt_e"><div class="para" id="sec10-3-concept-sata-04-3-5-2-1">Correct. The second particle moves at twice the speed of the first particle.</div></li>
+<li data-component="answer" id="rs-sec10-3-concept-sata-04_opt_f" data-correct=""><div class="para" id="sec10-3-concept-sata-04-3-6-1-1">Both particles have constant acceleration.</div></li>
+<li data-component="feedback" id="rs-sec10-3-concept-sata-04_opt_f"><div class="para" id="sec10-3-concept-sata-04-3-6-2-1">Correct. For the first particle the acceleration is 2 and for the second is 4 at any time <span class="process-math">\(t\)</span>
+</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 1.2.4: Exercise: Same curve, different parameterizations."><a href="#sec10-3-concept-sata-04" title="Copy heading and permalink for Exercise 1.2.4: Exercise: Same curve, different parameterizations." aria-label="Copy heading and permalink for Exercise 1.2.4: Exercise: Same curve, different parameterizations.">🔗</a></div></article><article class="exercise exercise-like" id="sec10-3-concept-match-01"><h4 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercise: Match each condition with its geometric interpretation..</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone cardsort_section"><ul data-component="dragndrop" data-question_label="" style="visibility: hidden;" id="rs-sec10-3-concept-match-01">
+<span data-subcomponent="question"><div class="para" id="sec10-3-concept-match-01-2-1">Match each condition for a parametric curve with the correct interpretation.<div class="autopermalink" data-description="Paragraph"><a href="#sec10-3-concept-match-01-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></span><li data-subcomponent="draggable" id="rs-sec10-3-concept-match-01_drag1" data-category="1"><span class="process-math">\(\dfrac{dy}{dt}=0,\ \dfrac{dx}{dt}\neq 0\)</span></li>
+<li data-subcomponent="dropzone" for="rs-sec10-3-concept-match-01_drag1" data-category="1">Horizontal tangent line</li>
+<li data-subcomponent="draggable" id="rs-sec10-3-concept-match-01_drag2" data-category="2"><span class="process-math">\(\dfrac{dx}{dt}=0,\ \dfrac{dy}{dt}\neq 0\)</span></li>
+<li data-subcomponent="dropzone" for="rs-sec10-3-concept-match-01_drag2" data-category="2">Horizontal normal line</li>
+<li data-subcomponent="draggable" id="rs-sec10-3-concept-match-01_drag3" data-category="3"><span class="process-math">\(\dfrac{d^2y}{dx^2}&gt;0\)</span></li>
+<li data-subcomponent="dropzone" for="rs-sec10-3-concept-match-01_drag3" data-category="3">Concave up</li>
+<li data-subcomponent="draggable" id="rs-sec10-3-concept-match-01_drag4" data-category="4">
+<span class="process-math">\(\dfrac{dx}{dt}&gt;0\text{,}\)</span> <span class="process-math">\(\dfrac{dy}{dt}&gt;0\)</span>
+</li>
+<li data-subcomponent="dropzone" for="rs-sec10-3-concept-match-01_drag4" data-category="4">The curve <span class="process-math">\(y=y(x)\)</span> is increasing near <span class="process-math">\(x\text{.}\)</span>
+</li>
+<li data-subcomponent="dropzone" for="rs-sec10-3-concept-match-01_drag5" data-category="5">Constant speed</li>
+<li data-subcomponent="dropzone" for="rs-sec10-3-concept-match-01_drag6" data-category="6">Clockwise motion</li>
+<li data-subcomponent="dropzone" for="rs-sec10-3-concept-match-01_drag7" data-category="7">The curve <span class="process-math">\(y=y(x)\)</span> is decreasing near <span class="process-math">\(x\text{.}\)</span>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.2.5: Exercise: Match each condition with its geometric interpretation."><a href="#sec10-3-concept-match-01" title="Copy heading and permalink for Exercise 1.2.5: Exercise: Match each condition with its geometric interpretation." aria-label="Copy heading and permalink for Exercise 1.2.5: Exercise: Match each condition with its geometric interpretation.">🔗</a></div></article><article class="exercise exercise-like" id="mathematical-multiple-choice-multiple-answers"><h4 class="heading">
+<span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercise: Select all that apply.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="mathematical-multiple-choice-multiple-answers-2-1">Let a smooth curve be given by parametric equations <span class="process-math">\(x=f(t)\)</span> and <span class="process-math">\(y=g(t)\)</span> on <span class="process-math">\(a\le t\le b\text{.}\)</span> Which of the following statements are true? Select all that apply.<div class="autopermalink" data-description="Paragraph"><a href="#mathematical-multiple-choice-multiple-answers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" id="rs-mathematical-multiple-choice-multiple-answers" data-multipleanswers="true">
+<li data-component="answer" id="rs-mathematical-multiple-choice-multiple-answers_opt_a" data-correct=""><div class="para" id="mathematical-multiple-choice-multiple-answers-3-1-1-1">The arc length of the curve from <span class="process-math">\(t=a\)</span> to <span class="process-math">\(t=b\)</span> is <span class="process-math">\(\displaystyle L=\int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mathematical-multiple-choice-multiple-answers_opt_a"><div class="para" id="mathematical-multiple-choice-multiple-answers-3-1-2-1">Correct. This is the standard arc length formula for a parametrically defined curve.</div></li>
+<li data-component="answer" id="rs-mathematical-multiple-choice-multiple-answers_opt_b" data-correct=""><div class="para" id="mathematical-multiple-choice-multiple-answers-3-2-1-1">To determine concavity of a parametric curve, one typically studies <span class="process-math">\(\dfrac{d^2y}{dx^2}\text{,}\)</span> not just <span class="process-math">\(\dfrac{d^2y}{dt^2}\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mathematical-multiple-choice-multiple-answers_opt_b"><div class="para" id="mathematical-multiple-choice-multiple-answers-3-2-2-1">Correct. Concavity with respect to the graph in the <span class="process-math">\(xy\)</span>-plane is determined by <span class="process-math">\(\dfrac{d^2y}{dx^2}\text{,}\)</span> since this describes how the slope <span class="process-math">\(\dfrac{dy}{dx}\)</span> changes as <span class="process-math">\(x\)</span> changes.</div></li>
+<li data-component="answer" id="rs-mathematical-multiple-choice-multiple-answers_opt_c"><div class="para" id="mathematical-multiple-choice-multiple-answers-3-3-1-1">If <span class="process-math">\(\dfrac{d^2y}{dt^2}&gt;0\)</span> on an interval, then the parametric curve must be concave up there.</div></li>
+<li data-component="feedback" id="rs-mathematical-multiple-choice-multiple-answers_opt_c"><div class="para" id="mathematical-multiple-choice-multiple-answers-3-3-2-1">Incorrect. Concavity of a parametric curve depends on <span class="process-math">\(\dfrac{d^2y}{dx^2}\text{,}\)</span> not merely on <span class="process-math">\(\dfrac{d^2y}{dt^2}\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="rs-mathematical-multiple-choice-multiple-answers_opt_d"><div class="para" id="mathematical-multiple-choice-multiple-answers-3-4-1-1">The arc length can always be found by integrating <span class="process-math">\(\displaystyle \int_a^b \left(\frac{dy}{dx}\right)\,dt\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="rs-mathematical-multiple-choice-multiple-answers_opt_d"><div class="para" id="mathematical-multiple-choice-multiple-answers-3-4-2-1">Incorrect. Arc length depends on the total rate of change in both coordinates, so both <span class="process-math">\(\dfrac{dx}{dt}\)</span> and <span class="process-math">\(\dfrac{dy}{dt}\)</span> are needed.</div></li>
+<li data-component="answer" id="rs-mathematical-multiple-choice-multiple-answers_opt_e"><div class="para" id="mathematical-multiple-choice-multiple-answers-3-5-1-1">If <span class="process-math">\(\dfrac{dy}{dx}\)</span> is increasing as <span class="process-math">\(x\)</span> increases, then the curve is concave down.</div></li>
+<li data-component="feedback" id="rs-mathematical-multiple-choice-multiple-answers_opt_e"><div class="para" id="mathematical-multiple-choice-multiple-answers-3-5-2-1">Incorrect. If <span class="process-math">\(\dfrac{dy}{dx}\)</span> is increasing as <span class="process-math">\(x\)</span> increases, then the curve is concave up.</div></li>
+</ul>
+</div></div>
+<div class="solutions"><details id="mathematical-multiple-choice-multiple-answers-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="mathematical-multiple-choice-multiple-answers-4-1">Separate the ideas: <span class="process-math">\(\dfrac{dy}{dx}\)</span> gives slope, <span class="process-math">\(\dfrac{d^2y}{dx^2}\)</span> gives concavity, and arc length measures the total distance traveled along the curve.<div class="autopermalink" data-description="Paragraph"><a href="#mathematical-multiple-choice-multiple-answers-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.2.6.1"><a href="#mathematical-multiple-choice-multiple-answers-4" title="Copy heading and permalink for Hint 1.2.6.1" aria-label="Copy heading and permalink for Hint 1.2.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 1.2.6: Exercise: Select all that apply"><a href="#mathematical-multiple-choice-multiple-answers" title="Copy heading and permalink for Exercise 1.2.6: Exercise: Select all that apply" aria-label="Copy heading and permalink for Exercise 1.2.6: Exercise: Select all that apply">🔗</a></div></article><article class="exercise exercise-like" id="horizontal-parson-arc-length-specific-hard"><h4 class="heading">
+<span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Build the Arc Length Integral.</span>
+</h4>
+<div class="ptx-runestone-container"><div class="runestone hparsons_section"><div data-component="hparsons" class="hparsons_section" id="rs-horizontal-parson-arc-length-specific-hard">
+<div class="hp_question">
+<div class="para" id="horizontal-parson-arc-length-specific-hard-2-1">Consider the parametric curve <span class="process-math">\(x(t)=t^3-3t,\quad y(t)=t^2+1,\quad -1\le t\le 2.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-arc-length-specific-hard-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="horizontal-parson-arc-length-specific-hard-2-2">Arrange the blocks to form the correct expression for the arc length of the curve on the given interval.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-arc-length-specific-hard-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="horizontal-parson-arc-length-specific-hard-2-3">
+<em class="emphasis">Note:</em> Some blocks are distractors and should not be used.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-arc-length-specific-hard-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="hparsons"></div>
+<textarea style="visibility: hidden" data-randomize="true" data-reuse="false" data-blockanswer="0 1 2 3 4 5 6 7">
+--blocks--
+<span class="process-math">\(\int_{-1}^{2}\)</span>
+sqrt
+<span class="process-math">\(\Bigl(\)</span>
+<span class="process-math">\(\left(3t^2-3\right)^2\)</span>
+<span class="process-math">\(+\)</span>
+<span class="process-math">\(4t^2\)</span>
+<span class="process-math">\(\Bigr)\)</span>
+<span class="process-math">\(\,dt\)</span>
+<span class="process-math">\(\int_{0}^{2}\)</span>
+<span class="process-math">\(\left(3t^2-3\right)\)</span>
+<span class="process-math">\(2t\)</span>
+</textarea>
+</div></div></div>
+<div class="solutions">
+<details id="horizontal-parson-arc-length-specific-hard-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="horizontal-parson-arc-length-specific-hard-4-1">
+<div class="para">The correct arc length expression is</div>
+<div class="displaymath process-math" id="horizontal-parson-arc-length-specific-hard-4-1-1">
+\begin{equation*}
+\int_{-1}^{2}\sqrt{\left(3t^2-3\right)^2+\left(2t\right)^2}\,dt.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-arc-length-specific-hard-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.7.1"><a href="#horizontal-parson-arc-length-specific-hard-4" title="Copy heading and permalink for Answer 1.2.7.1" aria-label="Copy heading and permalink for Answer 1.2.7.1">🔗</a></div>
+</div></details><details id="horizontal-parson-arc-length-specific-hard-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="horizontal-parson-arc-length-specific-hard-5-1">
+<div class="para">For a parametric curve <span class="process-math">\(x=x(t)\text{,}\)</span> <span class="process-math">\(y=y(t)\text{,}\)</span> the arc length on <span class="process-math">\(a\le t\le b\)</span> is</div>
+<div class="displaymath process-math" id="horizontal-parson-arc-length-specific-hard-5-1-4">
+\begin{equation*}
+L=\int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-arc-length-specific-hard-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="horizontal-parson-arc-length-specific-hard-5-2">
+<div class="para">Here,</div>
+<div class="displaymath process-math" id="horizontal-parson-arc-length-specific-hard-5-2-1">
+\begin{equation*}
+\frac{dx}{dt}=3t^2-3,\qquad \frac{dy}{dt}=2t.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-arc-length-specific-hard-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="horizontal-parson-arc-length-specific-hard-5-3">
+<div class="para">Therefore,</div>
+<div class="displaymath process-math" id="horizontal-parson-arc-length-specific-hard-5-3-1">
+\begin{equation*}
+L=\int_{-1}^{2}\sqrt{\left(3t^2-3\right)^2+\left(2t\right)^2}\,dt.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-arc-length-specific-hard-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.7.1"><a href="#horizontal-parson-arc-length-specific-hard-5" title="Copy heading and permalink for Solution 1.2.7.1" aria-label="Copy heading and permalink for Solution 1.2.7.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Exercise 1.2.7: Build the Arc Length Integral"><a href="#horizontal-parson-arc-length-specific-hard" title="Copy heading and permalink for Exercise 1.2.7: Build the Arc Length Integral" aria-label="Copy heading and permalink for Exercise 1.2.7: Build the Arc Length Integral">🔗</a></div></article><div class="autopermalink" data-description="Exercises 1.2"><a href="#calculus_parametric" title="Copy heading and permalink for Exercises 1.2" aria-label="Copy heading and permalink for Exercises 1.2">🔗</a></div></section><div class="autopermalink" data-description="Section 1.2: 10.3 Calculus and Parametric Equations"><a href="#sec-1-3parametric-questions" title="Copy heading and permalink for Section 1.2: 10.3 Calculus and Parametric Equations" aria-label="Copy heading and permalink for Section 1.2: 10.3 Calculus and Parametric Equations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-10-2parametric-questions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
